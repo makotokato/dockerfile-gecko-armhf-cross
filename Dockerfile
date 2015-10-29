@@ -2,6 +2,8 @@ FROM ubuntu:15.04
 MAINTAINER Makoto Kato <m_kato@ga2.so-net.ne.jp>
 
 ADD sources.list /etc/apt/
+RUN mkdir /mozilla
+ADD mozconfig.sample /mozilla/
 RUN dpkg --add-architecture armhf
 RUN apt-get update
 RUN apt-get upgrade -y
@@ -28,7 +30,5 @@ RUN apt-get install -y --no-install-recommends \
   mesa-common-dev:armhf
 
 RUN apt-get clean
-
-RUN mkdir /mozilla
 
 ENV SHELL=/bin/bash

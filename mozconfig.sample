@@ -1,0 +1,17 @@
+CROSS_COMPILE=1
+CC=arm-linux-gnueabihf-gcc
+CXX=arm-linux-gnueabihf-g++
+export PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
+
+ac_add_options --prefix=/usr/lib/arm-linux-gnueabihf
+ac_add_options --target=arm-linux-gnueabihf
+ac_add_options --enable-application=browser
+ac_add_options --with-ccache
+
+# If using opt build
+# ac_add_options --enable-optimize
+# If using debug build
+# ac_add_options --enable-debug
+# If turned off tests
+# ac_add_options --disable-tests
+
