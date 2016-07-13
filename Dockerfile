@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM ubuntu:16.04
 MAINTAINER Makoto Kato <m_kato@ga2.so-net.ne.jp>
 
 ADD sources.list /etc/apt/
@@ -24,7 +24,6 @@ RUN apt-get install -y --no-install-recommends \
   libgconf2-dev:armhf \
   libpulse-dev:armhf \
   libxt-dev:armhf \
-  libgstreamer-plugins-base0.10-dev:armhf \
   libgtk2.0-dev:armhf \
   libgtk-3-dev:armhf \
   mesa-common-dev:armhf
