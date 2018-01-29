@@ -15,6 +15,7 @@ RUN apt-get update && \
   clang-3.9 \
   curl \
   g++ \
+  g++-4.9-arm-linux-gnueabihf \
   g++-arm-linux-gnueabihf \
   llvm-3.9 \
   mercurial \

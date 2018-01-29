@@ -3,7 +3,7 @@ CC=arm-linux-gnueabihf-gcc
 CXX=arm-linux-gnueabihf-g++
 export PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
 
-ac_add_options --prefix=/usr/lib/arm-linux-gnueabihf
+ac_add_options --prefix=arm-linux-gnueabihf
 ac_add_options --target=arm-linux-gnueabihf
 ac_add_options --enable-application=browser
 ac_add_options --with-ccache
@@ -15,3 +15,4 @@ ac_add_options --with-ccache
 # If turned off tests
 # ac_add_options --disable-tests
 
+export BINDGEN_CFLAGS="--target=arm-linux-gnueabihf -I/usr/arm-linux-gnueabihf/include/c++/5 -I/usr/arm-linux-gnueabihf/include/c++/5/arm-linux-gnueabihf -I/usr/lib/llvm-3.9/lib/clang/3.9.1/include"
